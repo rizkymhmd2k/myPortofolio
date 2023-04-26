@@ -8,40 +8,37 @@ import Carousel from './Carousel';
 
 
 
-const PortCard = ({ imgUrl, title, content, modalTitle, modalTitle2, modalContent, featureContents, Tools, carouselPict }) => {
+const PortCard = ({ imgUrl, title, content, modalTitle, modalTitle2, modalContent, featureContents, Tools, carouselPict, githubLink }) => {
     const [showModal, setShowModal] = React.useState(false);
-    console.log('xxxxxxxxfeature', carouselPict)
     // featureContents?.map((x) => console.log('xxx', x))
 
 
     return (
         <div >
 
-            <div class="rounded-3xl	 shadow-lg bg-white max-w-sm p-4 relative w-72 sm:w-96">
+            <div class="rounded-3xl	 shadow-lg bg-white  p-4 relative w-sm lg:w-[600px] max-h-86">
 
                 <div className='rounded-2xl	relative group overflow-hidden bg-black'>
 
-
-
                     <div className='relative  transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:opacity-70' >
 
-                        <img class="w-full h-[270px] object-cover" src='ss-auth.png' alt="" />
+                        <img class="w-full h-80 object-cover" src={imgUrl} alt="" />
 
                     </div>
 
-                    <div className='absolute inset-0 flex items-center justify-center '>
-                            <motion.div whileHover={{ scale: 1.1 }}
-                                className='flex gap-2 mx-auto items-center justify-center z-auto'>
-                                <AiFillEye onClick={() => setShowModal(true)} className={`${styles.flexCenter} fill-white block mx-auto w-[50px] h-full  opacity-0 group-hover:opacity-100 transition-all duration-300`} />
-                                <AiFillInfoCircle onClick={() => setShowModal(true)} className={`${styles.flexCenter} fill-white block mx-auto w-[40px] h-full opacity-0 group-hover:opacity-100 transition-all duration-300`} />
-                            </motion.div>
-                        </div>
+                    <div onClick={() => setShowModal(true)} className='absolute inset-0 flex items-center justify-center '>
+                        <motion.div whileHover={{ scale: 1.1 }}
+                            className='flex gap-2 mx-auto items-center justify-center z-auto'>
+                            <AiFillEye onClick={() => setShowModal(true)} className={`${styles.flexCenter} fill-white block mx-auto w-[50px] h-full  opacity-0 group-hover:opacity-100 transition-all duration-300`} />
+                            <AiFillInfoCircle onClick={() => setShowModal(true)} className={`${styles.flexCenter} fill-white block mx-auto w-[40px] h-full opacity-0 group-hover:opacity-100 transition-all duration-300`} />
+                        </motion.div>
+                    </div>
 
                 </div>
 
                 <div class={`p-6 ${styles.flexCenter} flex-col flex w-full`}>
                     <h5 class="text-gray-900 text-xl font-medium mb-2">{title}</h5>
-                    <p class="text-gray-700 text-base mb-4">{content}</p>
+                    <p class="text-gray-700 text-base mb-4 text-center">{content}</p>
                 </div>
             </div>
 
@@ -79,6 +76,15 @@ const PortCard = ({ imgUrl, title, content, modalTitle, modalTitle2, modalConten
                                             > {modalTitle}
                                             </h2>
                                             <p className="my-[16px] font-normal lg:text-[20px] text-[14px] text-slate-700">{modalTitle2}</p>
+                                            <a href={githubLink} className="flex flex-row items-center ">
+                                                <img
+                                                    key={githubLink}
+                                                    src='/github.png'
+                                                    className="w-[34px] h-[34px] object-contain cursor-pointer filter invert"
+                                                />
+                                                <p className="my-[16px] font-normal lg:text-[20px] text-[14px] text-slate-700 ml-2">Checkout the code!</p>
+
+                                            </a>
                                         </div>
 
                                     </div>
