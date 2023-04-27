@@ -24,7 +24,7 @@ const World = () => (
       {/* <TypingText title="| Check out some of my latest projects with creative ideas." textStyles="text-center" /> */}
       <TitleText
         title={(
-          <>Projets i have done
+          <>Projects i have done
           </>
           )}
         textStyles="text-center"
