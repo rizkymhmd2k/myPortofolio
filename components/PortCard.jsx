@@ -73,7 +73,7 @@ const PortCard = ({ imgUrl, title, content, modalTitle, modalTitle2, modalConten
                     <a href={githubLink} className="flex flex-row items-center ">
                       <img
                           key={githubLink}
-                          src="/github.png"
+                          src="./github.png"
                           className="w-[34px] h-[34px] object-contain cursor-pointer filter invert"
                         />
                       <p className="my-[16px] font-normal lg:text-[20px] text-[14px] text-slate-700 ml-2">Checkout the code!</p>
