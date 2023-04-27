@@ -1,5 +1,5 @@
-import { Footer, Navbar, Navbar1 } from '../components';
-import { About, Explore, Feedback, Hero, Insights, WhatsNew, World, Contact, HeroPage } from '../sections';
+import { Footer, Navbar1 } from '../components';
+import {WhatsNew, World, Contact, HeroPage } from '../sections';
 
 const Home = () => (
   <div className="bg-primary-black  ">
