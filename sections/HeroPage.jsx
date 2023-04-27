@@ -32,7 +32,7 @@ const HeroPage = () => (
             variants={boxes(1.2)}
           >
             <img
-              src="/node.png"
+              src="./node.png"
               alt="get-started"
               className="w-[120px]  object-contain"
             />
@@ -41,7 +41,7 @@ const HeroPage = () => (
             variants={boxes(1.3)}
           >
             <img
-              src="/react.png"
+              src="./react.png"
               alt="get-started"
               className="w-[100px]  object-contain"
             />
@@ -50,7 +50,7 @@ const HeroPage = () => (
             variants={boxes(1.4)}
           >
             <img
-              src="/tailwind.png"
+              src="./tailwind.png"
               alt="get-started"
               className="w-[100px]  object-contain"
             />
