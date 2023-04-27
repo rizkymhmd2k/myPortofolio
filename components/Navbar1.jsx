@@ -12,7 +12,7 @@ import { navLinks } from "../constants";
 
 const Navbar = () => {
     const [active, setActive] = useState("Home");
-    const [toggle, setToggle] = useState(false);
+    const [toggle, setToggle] = useState(true);
 
     //scrollNavbarGlass
     const [navbar, setNavbar] = useState(false);
@@ -100,7 +100,7 @@ const Navbar = () => {
 
             <div className="sm:hidden flex flex-1 justify-end items-center">
                 <img
-                    src={toggle ? './close.svg' : './menu.svg'}
+                    src={toggle ? './menu.svg' : './close.svg'}
                     alt="menu"
                     className="w-[28px] h-[28px] object-contain z-50"
                     onClick={() => setToggle(!toggle)}
