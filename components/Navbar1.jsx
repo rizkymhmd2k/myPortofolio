@@ -10,6 +10,7 @@ import { navLinks } from '../constants';
 const Navbar = () => {
   const [active, setActive] = useState('Home');
   const [toggle, setToggle] = useState(true);
+  // console.log('togglestate', toggle);
 
   // scrollNavbarGlass
   const [navbar, setNavbar] = useState(false);
@@ -63,6 +64,7 @@ const Navbar = () => {
 
       <motion.div
         variants={navVariants}
+        initial="hidden"
         animate={navbar ? 'hidden' : 'show'}
         className="absolute w-[50%] inset-0 gradient-01"
       />
@@ -86,7 +88,7 @@ const Navbar = () => {
 
       <div className="sm:hidden flex flex-1 justify-end items-center">
         <img
-          src={toggle ? './close.svg' : './menu.svg'}
+          src={toggle ? './menu.svg' : './close.svg'}
           alt="menu"
           className="w-[28px] h-[28px] object-contain z-50"
           onClick={() => setToggle(!toggle)}
@@ -94,6 +96,7 @@ const Navbar = () => {
 
         <motion.div
           variants={navPhone}
+          initial="hidden"
           animate={toggle ? 'hidden' : 'show'}
           className="z-1 p-8 bg-white absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar z-50"
         >
