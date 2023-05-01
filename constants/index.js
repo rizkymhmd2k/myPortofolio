@@ -46,7 +46,7 @@ export const experience = [
     content: 'Worked at google as front end and backend engineer',
   },
   {
-    date: 'August, 2024',
+    date: 'August, 2042',
     title: 'World Domination',
     content: 'Replaced elon musk',
   },
