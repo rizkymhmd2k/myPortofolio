@@ -1,4 +1,3 @@
-import Hero from './Hero';
 import About from './About';
 import Explore from './Explore';
 import HeroPage from './HeroPage';
@@ -11,7 +10,6 @@ import Contact from './Contact';
 
 
 export {
-  Hero,
   About,
   Explore,
   HeroPage,

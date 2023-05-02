@@ -1,4 +1,3 @@
-import Navbar from './Navbar';
 import Navbar1 from './Navbar1';
 
 import { TypingText, TitleText } from './CustomTexts';
@@ -11,11 +10,7 @@ import PortCard from './PortCard';
 import ContactCard from './ContactCard';
 import Carousel from './Carousel';
 
-
-
-
 export {
-  Navbar,
   Navbar1,
   TitleText,
   TypingText,
