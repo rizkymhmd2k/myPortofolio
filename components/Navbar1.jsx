@@ -9,7 +9,7 @@ import { navLinks } from '../constants';
 
 const Navbar = () => {
   const [active, setActive] = useState('Home');
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
   // console.log('togglestate', toggle);
 
   // scrollNavbarGlass
@@ -88,36 +88,39 @@ const Navbar = () => {
 
       <div className="sm:hidden flex flex-1 justify-end items-center">
         <img
-          src={toggle ? './menu.svg' : './close.svg'}
+          src={toggle ? './close.svg' : './menu.svg'}
           alt="menu"
           className="w-[28px] h-[28px] object-contain z-50"
           onClick={() => setToggle(!toggle)}
         />
+        {toggle ? (
+          <motion.div
+            variants={navPhone}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="p-8 bg-white absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar z-10"
+          >
 
-        <motion.div
-          variants={navPhone}
-          initial="hidden"
-          animate={toggle ? 'hidden' : 'show'}
-          className="z-1 p-8 bg-white absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar z-50"
-        >
-
-          {/* <div
+            {/* <div
                     className={`${!toggle ? "hidden" : "flex"
                         } p-8 bg-white absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar z-50`}
                 > */}
-          <ul className="list-none flex justify-end items-start flex-1 flex-col">
-            {navLinks.map((nav, index) => (
-              <li
-                key={nav.id}
-                className={`font-poppins font-medium cursor-pointer text-[20px] ${active === nav.title ? 'text-black' : 'text-dimWhite'
-                } ${index === navLinks.length - 1 ? 'mb-0' : 'mb-8'}`}
-                onClick={() => setActive(nav.title)}
-              >
-                <a href={`#${nav.id}`}>{nav.title}</a>
-              </li>
-            ))}
-          </ul>
-        </motion.div>
+            <ul className="list-none flex justify-end items-start flex-1 flex-col">
+              {navLinks.map((nav, index) => (
+                <li
+                  key={nav.id}
+                  className={`font-poppins font-medium cursor-pointer text-[20px] ${active === nav.title ? 'text-black' : 'text-dimWhite'
+                  } ${index === navLinks.length - 1 ? 'mb-0' : 'mb-8'}`}
+                  onClick={() => setActive(nav.title)}
+                >
+                  <a href={`#${nav.id}`}>{nav.title}</a>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        ) : null}
+
       </div>
     </nav>
 
