@@ -18,7 +18,7 @@ export const portofolios = [
     title: 'Tax Page',
     content: 'A digital solution to make tax obligations easier for taxpayers.',
     // modals
-    githubLink: 'https://github.com/rizkymhmd2k/pajakparingin',
+    githubLink: 'https://github.com/rizkymhmd2k/pajakparingin1',
     modalTitle: 'Tax Landing Page.',
     modalTitle2: 'Built on the NextJS framework, this website offers a range of services to help your tax obligations from various tax guides to  billing. Its intuitive and responsive UI allows you to track your tax requests effortlessly, while the Framer animations add an extra layer of visual appeal.',
     modalContent: 'There is no need to spend hours queuing at the tax office when you have this website at your fingertips. With its easy-to-use online services, you can fulfill your tax obligations quickly and easily, without even leaving your home. From online consultations with experts to keeping track of your tax requests, this platform offers everything you need to manage your tax obligations seamlessly.',
@@ -67,10 +67,10 @@ export const newFeatures = [
     imgUrl: './mongo-logo.svg',
     subtitle: 'mongo',
   },
-  {
-    imgUrl: './redux-logo.svg',
-    subtitle: 'reduxTK',
-  },
+  // {
+  //   imgUrl: './redux-logo.svg',
+  //   subtitle: 'reduxTK',
+  // },
   {
     imgUrl: './nodejs-logo1.svg',
     subtitle: 'node',

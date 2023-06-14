@@ -60,14 +60,14 @@ const PortCard = ({ imgUrl, title, content, modalTitle, modalTitle2, modalConten
                   </button>
                 </div>
               </div>
-              <div className="flex-1 max-h-[69vh] overflow-y-auto px-0 py-4 md:p-10 border-0 rounded-b-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+              <div className="flex-1 max-h-[69vh] overflow-y-auto px-0 py-4 md:p-10 lg:pt-0 border-0 rounded-b-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/* cols and row */}
                 <div className="flex flex-col lg:flex-row md:gap-[1.75rem] justify-center items-center">
                   <div className="flex-1 lg:w-1/2 w-full ">
 
                     <Carousel carouselPict={carouselPict} />
                   </div>
-                  <div className="flex-1 flex-col p-6">
+                  <div className="flex-1 flex-col p-6 pt-0">
                     <h2 className="mt-[8px] font-bold md:text-[60px] text-[40px] text-black"> {modalTitle}
                     </h2>
                     <p className="my-[16px] font-normal lg:text-[20px] text-[14px] text-slate-700">{modalTitle2}</p>
@@ -87,7 +87,7 @@ const PortCard = ({ imgUrl, title, content, modalTitle, modalTitle2, modalConten
                 {/* body */}
                 <div className="relative p-6 flex-auto">
                   <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b" />
-                  <p className="my-4 lg:text-[20px] text-[14px] text-slate-700 text-lg leading-relaxed">
+                  <p className="lg:text-[20px] text-[14px] text-slate-700 text-lg leading-relaxed">
                     {modalContent}
                   </p>
                   <div className="flex flex-col md:flex-row gap-[5px] md:gap-[15rem] p-6">
